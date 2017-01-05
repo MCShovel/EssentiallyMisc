@@ -7,6 +7,7 @@ import org.bukkit.plugin.java.JavaPlugin;
  
 public class MainPlugin extends JavaPlugin {
 	public final   Logger  _logger;
+	public static MainPlugin Instance;
 	private WorldEvents _listener;
 	public Boolean _exLogging;
 	public final MainConfig Config;
@@ -14,6 +15,7 @@ public class MainPlugin extends JavaPlugin {
 	public com.steamcraftmc.EssentiallyMisc.Commands.CmdRecipe recipe;
 
 	public MainPlugin() {
+		Instance = this;
 		_exLogging = true;
 		_logger = getLogger();
 		_logger.setLevel(Level.ALL);

@@ -2,7 +2,11 @@ package com.steamcraftmc.EssentiallyMisc.utils;
 
 import java.util.HashSet;
 import java.util.Set;
+import java.util.logging.Level;
+
 import org.bukkit.Material;
+
+import com.steamcraftmc.EssentiallyMisc.MainPlugin;
 
 import net.minecraft.server.v1_11_R1.Item;
 import net.minecraft.server.v1_11_R1.ItemStack;
@@ -44,8 +48,9 @@ public class BlockUtil {
 	public static String itemName(int blockId, int blockData, boolean hasData) {
 		String tmp = null;
 		try {
-			ItemStack stck = new ItemStack(Item.getById(blockId), 0, blockData);
+			ItemStack stck = new ItemStack(Item.getById(blockId), 1, blockData);
 			tmp = stck == null ? null : stck.getName();
+	        //MainPlugin.Instance.log(Level.INFO, "Name of " + blockId + ":" + blockData + " aka " + Item.getById(blockId) + " = " + tmp);
 		}
 		catch (Exception e) {}
 		if (tmp == null || tmp.length() == 0) {
