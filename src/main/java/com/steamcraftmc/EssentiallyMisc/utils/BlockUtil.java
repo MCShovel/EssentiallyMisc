@@ -8,8 +8,8 @@ import org.bukkit.Material;
 
 import com.steamcraftmc.EssentiallyMisc.MainPlugin;
 
-import net.minecraft.server.v1_11_R1.Item;
-import net.minecraft.server.v1_11_R1.ItemStack;
+import net.minecraft.server.v1_12_R1.Item;
+import net.minecraft.server.v1_12_R1.ItemStack;
 
 public class BlockUtil {
 
